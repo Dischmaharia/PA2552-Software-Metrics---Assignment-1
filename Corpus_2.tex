@@ -1,0 +1,60 @@
+\section{A review of two selected software metrics tools}
+\label{review_tools_software_metrics}
+
+To get used to working with software metrics tools, we chose two different tools that we used to apply different metric types on a Java open-source project.
+
+\subsection{iText}
+
+Our group chose the project iText. We used the current version of iText which is iText 7. This is a Java framework for manipulating PDF files. The project which can be found on GitHub includes 12 different projects which are built into different \verb|.jar| files.
+
+\subsection{Our first tool: Metrics 1.3.8}
+
+The first tool we chose is an Eclipse plugin called Metrics.
+    
+    \subsubsection{Ease of installation and use}
+    
+        At first we tried to install the Metrics 1.3.6 plugin on Eclipse but that resulted in class loader exceptions, so we tried to install the version 1.3.8 instead. The installation process takes place entirely inside the IDE and it is straightforward and well documented on the plugin's web page. 
+        
+        Once the tool is installed, one can select a package in the package explorer, enable Metrics in the Properties dialog and see the metrics in the Metrics View. The metrics are recomputed with every build. However, the metrics can just be applied for a single project selected in the package explorer.
+        
+        The configuration is as expected in the program preferences under a proper node. The settings are easy to find and what they adjust is clear. However, there are only a  few settings, which leads to the conclusion that a lot of metrics can not be parametrized.
+
+    \subsubsection{OO metrics coverage}
+    
+        Several mainstream metrics are computed by this tool, including McCabe's Cyclomatic Complexity and Weighted Methods per Class, Depth in the Inheritance Tree, Number of Classes/Interfaces/Packages/Methods/Attributes, Number of Children, LOC (non-comment, non-blank lines), MLOC (LOC in each method) and LCOM. Furthermore, Afferent and Efferent Coupling (Ca, Ce) along with Instability (I) are reported.
+        
+        All the metrics are calculated at a package level as well as at a class level. For some metrics it even provides the metrics at method level.
+    
+    \subsubsection{Reporting possibilities}
+    
+        The tool reports the results in a tree-view element, where the user can inspect the values of the metrics along with basic statistics (total, maximum, average, standard deviation) on the package, class and method level. Within one level of abstraction, the values of the metrics are presented in the order of worse to better, and values over a specified limit are highlighted to indicate a problematic piece of code to the user. The user can also obtain XML reports of the results. Finally, there is also a dependency graph visualization option but it suffers from critical usability issues.
+    
+\subsection{Our second tool: Understand}
+
+    \subsubsection{Ease of installation and use}
+    
+        The tool is easy to install, \textit{via} an executable on Windows. It offers a complete user interface with different tools and visualization tabs.
+        
+        Creating a new metrics project is simple and once we select the main folder of our software project, all the metrics are calculated at every levels: method, class, package, and system level. Overall, the tool has good understandability and learnability properties : by wandering around around in the software, we discovered easily the different export options for reporting and visualization. The online documentation is also exhaustive.
+        
+        The backside in this software is that we don't know exactly where to search when we want to control the parameters of the metrics and understand them. We would have liked more parametrization possibilities in the metrics computation.
+        
+        It is also worth noting that we tried the trial version of the software. Understand is a commercial software with different pricings.
+    
+    \subsubsection{OO metrics coverage}
+    
+        The software covers the main metrics such as many common metrics derived from the counting of lines (LOC, CLOC, NCLOC, SLOC), complexity metrics (average and maximum Cyclomatic Complexity, maximum nesting). It also offers derived metrics such as the Comment/Code ratio. It also offers class OO metrics like LCOM, DIT, IFANIN, CBO, NOC, RFC, NIM, NIV, WMC. The tool gives numeric data for each class in the project regarding the metrics.
+    
+    \subsubsection{Reporting possibilities}
+    
+        Understand offers different ways to export metrics and create reports. 
+        
+        \begin{itemize}
+            \item We can first ``export the metrics'' about the project in a single CSV file. Options are granted to select or unselect all the metrics we want to export. We have the choice between a CSV export and an HTML export. The CSV file gives the metrics (when available) for each entity that the software can manage: method, class, package,system. The file is huge and need to be refined in a spreadsheet editor if we want to extract something consistent from it. The HTML option allows to visualize data in a tree view and access metrics at any level of the system, even for different programming languages, but removes the possibility to make further use of the data (which is possible with the CSV file).
+            
+            \item We can also generate another, even more ``visually friendly'' report. It offers pie and bar charts, as well as tables referencing all the metrics available for any entity of the system. Although the user interface and the reports are more attractive, the charts lacks an exhaustive legend. In the dashboard view for example, the units are missing on every pie chart and bar chart. It made our understanding ambiguous and confused us a bit.
+        
+        \end{itemize}
+        
+        Overall, the software has great capabilities for data reporting. It also has some integrated tools to visualize class dependencies, and can create tree maps with personalized metrics, which can be useful too.
+    

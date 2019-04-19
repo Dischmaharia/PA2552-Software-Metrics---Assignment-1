@@ -1,0 +1,17 @@
+===== Pranavi =====
+Coupling:S23
+Maintainability: S116
+
+===== Jules ====== 
+Cohesion: S12
+Understandability: S68
+Maintainability: S219
+
+===== Claudio ======
+Cohesion: s118 
+Coupling: s88
+
+===== Vassilis =====
+Cohesion: 
+Maintainability:
+Coupling:

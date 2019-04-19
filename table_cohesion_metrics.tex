@@ -1,0 +1,40 @@
+\begin{table*}[t]
+    \centering
+    
+    \begin{tabular}{p{2cm} p{4cm} p{10cm}}
+    
+        \toprule
+        
+            \textbf{Subtype of metric} & \textbf{Name} & \textbf{Description} \\
+            
+        \midrule
+        
+            \multirow[c]{3}{\linewidth}{\tiny\\\normalsize Considering the degree of interaction between methods} & Low-level Similarity-based Class Cohesion (LSCC) & LSCC is the average cohesion of all pairs of methods. Calculated through the MAR (Method-Attribute Reference) matrix that accounts for transitive interactions caused by method invocations, it considers the ratio of similarity between methods in a mathematically compliant and fine-grained way \cite{s12_cohesion}.\\
+                \cmidrule(rl){2-3}& Class Cohesion (CC) & Ratio of the summation of the similarities between all pairs of methods to the total number of pairs of methods \cite{s12_cohesion, s29_cohesion}.\\
+                \cmidrule(rl){2-3}& Class Cohesion Metric (SCOM) & Same as CC, but with a different equation to measure the similarity \cite{s12_cohesion}.\\
+                \cmidrule(rl){2-3}& Call-based Dependence between Methods (CDM) & Method-method metric equal to the proportion of incoming calls to a method that originate from a specific method. Being an asymmetric measure, the maximum value is used as a commutative measure \cite{s29_cohesion}. \\
+                
+        \midrule
+        
+            \multirow[c]{8}{\linewidth}{Not considering the degree of interaction between methods} & Structural Similarity between Methods (SSM) & Given two methods, the SSM is the proportion of instance variables that both methods use out of all used instance variables in those methods \cite{s29_cohesion}.\\
+                \cmidrule(rl){2-3}& Lack of Cohesion of Methods (LCOM or LCOM1) & Defined as the number of pairs of methods that do not share attributes \cite{s12_cohesion, s13_maintainability, s29_cohesion, s116_maintainability}. \\
+                \cmidrule(rl){2-3}& LCOM2 & Defined as the substraction of the number of pairs of methods that do not share attributes by the number of pairs of methods that share attributes. Equals zero if the result is negative \cite{s12_cohesion, s29_cohesion}.\\
+                \cmidrule(rl){2-3}& LCOM3 & In a graph where each node is a method of the class and each edge is one or more attributes shared between two methods, LCOM3 is equal to the number of edges \cite{s12_cohesion}.\\
+                \cmidrule(rl){2-3}& LCOM4 & In the LCOM3 graph, we add additional edges for method invocations, and count the edges again \cite{s12_cohesion}.\\
+                \cmidrule(rl){2-3}& Tight Class Cohesion (TCC) & Relative number of directly connected pairs of methods, where two methods are directly connected if they are directly connected to an attribute  \cite{s12_cohesion}.\\
+                \cmidrule(rl){2-3} & Loose Class Cohesion (LCC) & Relative number of indirectly connected pairs of methods, where two methods are indirectly connected if they are directly or indirectly connected to an attribute  \cite{s12_cohesion}.\\
+                \cmidrule(rl){2-3}& Degree of Cohesion - Direct (DC$_D$) & Relative number of directly connected pairs of methods, where two methods are directly connected if they satisfy TCC or if they directly or transitively invoke a same method  \cite{s12_cohesion}. \\
+                \cmidrule(rl){2-3}& Degree of Cohesion - Indirect (DC$_I$) & Relative number of directly or transitively connected pairs of methods, where two methods are transitively connected if they satisfy LCC or if they directly or transitively invoke a same method \cite{s12_cohesion}.\\
+                \cmidrule(rl){2-3}& Cohesion among Methods in a Class (CAMC) & Measures the extent of intersection of individual method parameter \cite{s118_cohesion}. \\
+                \cmidrule(rl){2-3}& Normalized Hamming Distance (NHD) & Calculate the cohesion based on the definition of hamming distance regarding the individual method parameter \cite{s118_cohesion}. \\
+                \cmidrule(rl){2-3}& Scaled NHD (SNHD) & Interprets the metrics from NHD in a more varied range \cite{s118_cohesion}. \\
+                \cmidrule(rl){2-3}& NHD modified (NHDM) & This metric focuses on removing the anomalies affecting the metrics NHD and SNHD \cite{s118_cohesion}. \\
+                
+        \bottomrule
+        
+    \end{tabular}
+    
+    \caption{Description of the cohesion metrics encountered in the studied papers.}
+    \label{table:cohesion_metrics}
+    
+\end{table*}

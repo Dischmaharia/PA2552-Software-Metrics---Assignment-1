@@ -1,0 +1,31 @@
+\begin{table*}[t]
+    \centering
+    \begin{tabular}{p{2cm} p{4cm} p{10cm}}
+        \toprule
+            \textbf{Subtype of metric} & \textbf{Name} & \textbf{Description} \\
+            
+            \midrule
+            \multirow{2}{\linewidth}{\tiny\\\normalsize Process based} & Halstead Bugs (B) & Metric that finds no. of bugs in a class in the implementation and correlated with complexity of software \cite{s116_maintainability}. \\
+               \cmidrule(rl){2-3} & Weighted Methods per Class (WMC) and Number of Methods (NoM) & The WMC of a class is the sum of the complexities of its methods, usually in terms of McCabe's cyclomatic complexity. When all methods are considered to have a complexity of 1, then the WMC is the number of methods \cite{s13_maintainability, s116_maintainability}. \\ 
+            
+            \midrule
+            
+            \multirow{6}{\linewidth}{Code based} & Depth in the Inheritance Tree (DIT)	& Distance of a class from the root of the inheritance tree \cite{s13_maintainability}. \\
+            
+                \cmidrule(rl){2-3} & Number of Children (NoC) & Number of direct subclasses of a  class.\cite{s13_maintainability} \\
+            
+                \cmidrule(rl){2-3} & SIZE1 and SIZE2 & SIZE1 is the number of semicolons in a class (e.g. Java). SIZE2 is the number of attributes and local methods of a class \cite{s13_maintainability}. \\
+            
+                \cmidrule(rl){2-3} & Comments Lines of Code (CLOC) 	& Metric that measures number of lines of code that has comments in each class \cite{s116_maintainability}.  \\
+            
+                \cmidrule(rl){2-3} & Number of transitive dependencies (Dcy) & Metric that measures no. of classes or interfaces that are directly or indirectly dependent on each class \cite{s116_maintainability}. \\
+    
+                 \cmidrule(rl){2-3} & Number of Line of code changed (CHANGE) & Metric that counts the change in source code as addition of one line as one, deletion as one, modification as two for determining the total change that occurred \cite{s13_maintainability, s116_maintainability}. \\ 
+        \bottomrule
+        
+    \end{tabular}
+    
+    \caption{Description of the maintainability metrics encountered in the studied papers.}
+    \label{table:maintainability_metrics}
+    
+\end{table*}

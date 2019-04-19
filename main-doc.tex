@@ -1,0 +1,57 @@
+\documentclass[a4paper, 10pt]{article}
+
+\usepackage[top=2.54cm, bottom=2.86cm, left=2cm, right=2cm]{geometry}
+\usepackage{multicol}
+
+\usepackage{booktabs}
+\usepackage{multirow}
+
+\usepackage{graphicx}
+
+\usepackage[sortcites=false,natbib=true,            style=ieee,backend=biber,maxbibnames=3,giveninits=true,uniquename=false,uniquelist=true,parentracker=true,url=false,doi=false,isbn=true,eprint=false,backref=true]{biblatex}
+\addbibresource{references.bib}
+
+\title{PA2552 Software Metrics - Assignment 1}
+\author{
+    Vassilis Asteriou -- \textit{vaat18@student.bth.se} -- \textit{981023T093}
+    \\
+    Claudio Bertozzi -- \textit{clbt18@student.bth.se} -- \textit{930206T578}
+    \\
+    Pranavi Bitra -- \textit{prbi18@student.bth.se} -- \textit{9710027443}
+    \\
+    Jules Lecuir -- \textit{julc18@student.bth.se} -- \textit{960509T330}
+}
+
+\date{\today}
+
+\begin{document}
+
+    \maketitle
+    \begin{multicols}{2}
+    
+        \begin{abstract}
+            In this document, we extract data from research papers and report different metrics we come across in the papers, providing a description and categorization of them. We also review two software metrics extraction tools and give our feedback about how we used them. 
+        \end{abstract}
+        
+        \section{Introduction}
+        
+            Metrics are a crucial tool for the improvement of software development processes. In this assignment, our goal is to get familiar with different object oriented (OO) metrics and tools and discuss them. 
+            
+            First, we will extract information from papers about software metrics and analyze information from ten of them, that focus on measuring coupling, cohesion, maintainability and understandability. We summarize them in section \ref{article_summaries}. Then, we will cover the metrics, systems under study, metrics extraction tools and visualization tools as well as statistical methods we came across in this literature review in sections \ref{categorization_of_metrics}, \ref{categorization_of_SUS}, \ref{metrics_extraction_tools} and \ref{visualizzation_statistical_tools}. Secondly, we will evaluate two different software metrics tools by using them on an open source project in section \ref{review_tools_software_metrics}. There, we will discuss their ease of installation and use, the metrics that they compute, and their visualization and data exporting features.
+            
+        \input{Corpus_1_1.tex}
+        
+        \input{Corpus_1_2.tex}
+    
+        \input{Corpus_2.tex}
+        
+        \section{Conclusion}
+            
+            In this assignment, we have deepened our knowledge on some of the most used metrics in the scientifical sphere. We familiarized ourselves with software metrics tools and could discuss their possibilities and limitations.
+            
+    \end{multicols}
+    
+    \clearpage
+    \printbibliography
+
+\end{document}

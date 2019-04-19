@@ -1,0 +1,92 @@
+\section{Object-oriented metrics used in the papers}
+\label{categorization_of_metrics}
+
+    The different types of metrics we found in the papers are summarized in tables \ref{table:cohesion_metrics} for cohesion metrics, \ref{table:coupling_metrics} for coupling metrics, \ref{table:maintainability_metrics} for maintainability metrics, and \ref{table:understandability_metrics} for understandability metrics.
+    
+    The coupling metrics we encountered are either structural, i.e. they are based on the structure of the program, or conceptual/semantic, i.e. they are based on natural language used in comments and identifiers. We decided to classify cohesion metrics based their ability to consider the degree of interaction between methods, i.e. not only classifying MMIs in a binary (and thus limited) way, but rather in a more fine-grained way. Maintainability metrics were split into two groups, as they are either process- or code-related. Understandability metrics are categorized as package level based metrics.
+    
+    \input{table_cohesion_metrics.tex}
+    \input{table_coupling_metrics.tex}    \input{table_maintainability_metrics.tex}
+    \input{table_understandability_metrics.tex}
+    
+\section{Systems studied in the papers}
+\label{categorization_of_SUS}
+    
+    \begin{description}
+        \item[Chatting softwares:] Turtle Chat (chatting software using Internet Protocol with server and client Part) \cite{s23_coupling}; Com Chat (chatting software using Java Communication API) \cite{s23_coupling}.
+        
+        \item[Text and visual editors:] Ekit (scenario based editor) \cite{s88_coupling}; JHotDraw (two-dimensional graphics framework) \cite{s89_coupling, s116_maintainability}; JEdit (Java-based text editor) \cite{s116_maintainability};  VoodooUML (Tcl/Tk-based UML editor) \cite{s89_coupling}; Umbrello (KDE-based UML editor) \cite{s89_coupling}; AgroUML (Java-based UML editor) \cite{s29_cohesion}; GanttProject (project management application) \cite{s12_cohesion}. 
+        
+        \item[Database management software:] Lucene (Java-based indexing and information retrieval software library) \cite{s116_maintainability}; Admission Test Management System (database software to store university students) \cite{s23_coupling}; Library Management System (scenario based database application) \cite{s88_coupling}; Charting library (Java open-source software for visualizing data) \cite{s118_cohesion}; JabRef (graphical application for bibliographical databases) \cite{s12_cohesion}.
+        
+        \item[3D modelling software:] Art Of Illusion (3D modeling and animation application) \cite{s12_cohesion}; Rhino (3D modelling, analysis, documentation, rendering and animation of 3D objects) \cite{s89_coupling}.
+        
+        \item[Text generation software:] XGen Source Code Generator (creates text output from structured text input) \cite{s68_understandability}; Jakarta Element Construction Set (Java API generating elements for various markup languages like HTML and XML) \cite{s68_understandability}.
+        
+    \end{description}
+    
+    We found other softwares in the papers that we didn't find pertinent to categorize, either because we lack information about them, such as Quality Evaluation Software (QUES) and User Interface Management System (UIMS) in \cite{s13_maintainability}, or because some are alone in their own categories, such as Openbravo (point-of-sale application designed for touch screens) \cite{s12_cohesion}, SPECjvm2008 (Java Virtual Machine Benchmark) \cite{s88_coupling}. In \cite{s219_maintainability}, the systems under study are web applications that were created all in the context of the scientific study, but no name is provided for them.
+    
+\section{Metrics extraction tools used in the papers}
+\label{metrics_extraction_tools}
+
+        \begin{itemize}
+            
+            \item CohMetric is a computational tool that produces indices for written and spoken texts. It measures cohesion and coherence metrics that allow readers to instantly gauge the difficulty of written text for the target audience \cite{s118_cohesion}.
+            
+            \item In \cite{s12_cohesion}, the metrics extraction tool is a home-made Java program that computes eleven cohesion metrics and automates the statistical comparison between them. 
+            \item In \cite{s29_cohesion}, the automatic refactoring of classes is also performed by a home-made tool.
+            
+            \item Chidamber and Kemerer Java Metric (CKJM) is the program that calculates the object-oriented metrics by processing the bytecode of compiled Java files. IntelliJ IDEA is an IDE meant for Java development \cite{s116_maintainability}.
+           
+            \item The tools  Borland Together and InCode were used to extract automatically code smells from source code, along with manual analysis of maintenance issues, such as daily interviews, screen recordings, code review, etc \cite{s219_maintainability}.
+            
+            \item Jerry Mendel's fuzzy logic tool is used to codify the fuzzy logic engine \cite{s13_maintainability}.
+             
+            \item The static metric evaluator parses the bytecode of application and reports the static metrics values using javassit library. The dymanic coupling data is collected by dynamic profiling \cite{s88_coupling}.
+            
+            \item Design Analyzer is developed in Java to analyze the source code of object-oriented system to retrieve the design patterns. It shows the interactions, relationships, roles, collaboration in graphical format \cite{s23_coupling}.
+            
+            \item To measure coupling, Columbus, IRC\textsuperscript{2}M and R/lda are used. Columbus is a reverse-engineering-based tool for C++ programs. IRC\textsuperscript{2}M is a tool for measuring semantic coupling metrics. The lda package in the R language is used for Latent Dirichlet Allocation \cite{s89_coupling}.
+            
+            \item In \cite{s68_understandability}, no tool was mentioned by the authors.
+            
+        \end{itemize}
+        
+        
+\section{Visualization methods and statistical measures used in the papers}
+\label{visualizzation_statistical_tools}
+    
+    \subsection{Methods to visualize extracted metrics}
+    
+        Various data and concept visualization methods can be found throughout the literature. Tables are commonly used for a variety of data and result visualization purposes, including displaying the rotating components of Principal Component Analysis \cite{s23_coupling, s89_coupling}, evaluating prediction models \cite{s68_understandability, s116_maintainability} and summarizing details and statistics \cite{s219_maintainability, s12_cohesion, s118_cohesion, s88_coupling, s13_maintainability, s116_maintainability}. 
+        
+        Other visualization methods include tree maps and pie charts to display distributions \cite{s219_maintainability, s12_cohesion}, box plots and bar charts to visualize comparisons and results \cite{s88_coupling, s13_maintainability, s29_cohesion}, diagrams to plot dependent against independent variables \cite{s29_cohesion}, a machine learning training history diagram \cite{s13_maintainability}, a Venn diagram describing a hierarchy \cite{s219_maintainability} and graphs describing methodologies or algorithms employed \cite{s12_cohesion, s88_coupling, s29_cohesion}.
+        
+    \subsection{Statistical measures and methods}
+        
+        There are many statistical approaches in the literature to verify results and evaluate proposed methodologies. Many papers include tables of descriptive statistics \cite{s68_understandability, s12_cohesion, s118_cohesion, s88_coupling, s13_maintainability}, usually including the minimum, maximum, mean and standard deviation, for a preliminary outlook over a dataset. 
+        A frequently seen method is the Principal Component Analysis, which helps explain the variance of a data set in terms of orthogonal components \cite{s23_coupling, s12_cohesion, s89_coupling}.
+        Correlation and tests are also frequently employed. Spearman's correlation coefficient, which identifies relations of monotony, is used in correlation and collinearity analyses \cite{s68_understandability, s12_cohesion}, whereas Pearson's correlation coefficient, which identifies linearity, is also used to analyze correlation \cite{s88_coupling, s13_maintainability}.
+        
+        To determine whether samples come from identical distributions the non-parametric Wilcoxon tests are applied -  specifically, the Wilcoxon Rank Sum test \cite{s29_cohesion}, which examines independent samples, and the Wilcoxon Signed Rank test \cite{s89_coupling} which examines dependent samples.
+        Regression Analysis, which models and analyzes the effect of one or more independent variables on a dependent variable, is used in different forms, including Multivariate Regression Analysis \cite{s68_understandability, s12_cohesion} and Univariate Logistic Regression \cite{s12_cohesion}.
+        In evaluation of the developed metrics and methods the Precision and Recall statistics, their composition into the F-measure and the Receiver Operation Characteristic are used, which quantify the performance of binary classification techniques \cite{s116_maintainability, s12_cohesion, s89_coupling}.
+        Other measures used include the Mahalanobis distance, which measures the distance of a point from a distribution \cite{s12_cohesion}, and various error metrics including the Root Mean Square Error and its normalized variant (RMS, NRMS) and the Mean Magnitude of Relative Error (MMRE) \cite{s68_understandability, s13_maintainability}.
+        
+        % \begin{itemize}
+        %     \item The cohesion metric averages and standard deviations in descriptive statistics while conducting empirical analyses \cite{s118_cohesion}.
+        %     \item The LSCC metric is a ratio, so any statistical measure can be performed on it, such as the mean, median, standard deviation, confidence intervals, and more The other metrics are not mathematically compliant, as explained in the summary of the article (see \ref{article_summary_s12}), so no proper statistical measure can be made on them. However, a correlation and loading matrix as well as a logistic regression were conducted to compare LSCC to the other metrics \cite{s12_cohesion}.
+
+        %     \item The Pearson Correlation Coefficient is a statistical measure of the strength of correration of two continuous variables, i.e. how dependent they are on one another \cite{s116_maintainability, s13_maintainability}.
+            
+        %     \item As stated in the summary in section \ref{article_summary_s219}, the study focused mainly on qualitative aspects of the link between code smells and maintenance problems. No statistical study has been deeply conducted during the study, only counting of defects and sometimes ratios \cite{s219_maintainability}.
+
+        %     \item Principal Component Analysis is a technique for identifying uncorrelated variables from large data set, based on the eigen decomposition of the covariance matrix. It is linear transformation technique that can help emphasize variation and show strong patterns in a dataset \cite{s23_coupling, s89_coupling} .
+
+        %     \item For independent and dependent variables utilize descriptive statistics to summarize dataset by min, max, average, standard deviation.
+        %     For correlation analysis it considers Spearman’s rank correlation is a non parametric version that measures the strength and direction of association between two ranked variables.
+        %     For collinearity it considers Variance Inflation Factor (VIF) that quantifies the correlation between independent variables and estimates variance of a regression coefficient is inflated due to collinearity in the model.
+        %     For multivariate Regression analysis it considers Mean Magnitude of relative error (MMRE) and Prediction level at 0.25. \cite{s68_understandability}. 
+        % \end{itemize}
+       

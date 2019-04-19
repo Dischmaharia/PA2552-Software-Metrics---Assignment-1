@@ -1,0 +1,20 @@
+\begin{table*}[t]
+    \centering
+    \begin{tabular}{p{4cm} p{12cm}}
+        \toprule
+            \textbf{Name} & \textbf{Description} \\
+            
+            \midrule
+            Number of classes (NC) 	& Metric that measures package size which determine no. of concrete and abstract classes \cite{s68_understandability}. \\
+            \midrule Afferent Couplings(Ca) & Metric that measures incoming dependencies for package which determine no. of other packages that depend on classes within package \cite{s68_understandability}. \\
+            \midrule Efferent Coupling (Ce)	& Metric that measures outgoing dependencies for package which determine no. of other packages that classes in package depend upon \cite{s68_understandability, s116_maintainability}. \\
+            \midrule
+            Instability (I) 	& It is ratio of efferent coupling to total coupling. Total coupling is Afferent and efferent coupling \cite{s68_understandability}. \\
+            \midrule
+            Distance (D)	& It measures perpendicular distance of package from idealized line which indicates package balance between abstractness and stability \cite{s68_understandability}. \\
+            
+        \bottomrule
+    \end{tabular}
+    \caption{Package-level metrics used for quantifying understandability.}
+    \label{table:understandability_metrics}
+\end{table*}

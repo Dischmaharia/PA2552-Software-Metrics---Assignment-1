@@ -1,0 +1,77 @@
+\section{Article summaries}
+\label{article_summaries}
+\subsection{Summaries of articles about cohesion metrics}
+    \subsubsection{\citetitle{s118_cohesion} \cite{s118_cohesion}}
+    
+        The authors investigate four different metric types to find a valid metric for cohesion at design level. In their understanding, the similarity of the parameter types of the different methods in a class indicates that they process closely related information. In this case the calculated metric value is height. I the class has a low cohesion the value is close to 0.
+
+        The used metric types are CAMC, NHD, SNHD and NHDM. All those metrics are based on mathematical calculations from the parameter-occurrence matrix which represents the different methods with their parameter types. 
+        
+        For the reason that all metric types have different side effects regarding anomalies or dependencies on the size of the class, the results for the cohesion value variate strongly. An interesting fact they could find out is that the NHDM always shows the lowest cohesion value and eliminates most of the side effects. They substantiate this to the fact that a class is not cohesive in general.
+
+
+    \subsubsection{\citetitle{s12_cohesion} \cite{s12_cohesion}}
+    \label{article_summary_s12}
+    
+        The article introduces a cohesion metric called Low-level Similarity-based Class Cohesion metric (LSCC).
+        
+        Until now, existing cohesion metrics like LCOM1, LCOM2, LCOM3, LCOM4, TCC, LCC, DC$_D$, DC$_I$ have several flaws, LSCC aims to solve most of them. LSCC is the only one that has a strong mathematical basis and makes it a more coherent and well-defined metric. It considers the number of shared attributes in Method-Method-Interactions (MMIs), and supports class inheritance and transitive interactions between methods. It captures a new dimension of cohesion on its own, as shown by the statistical studies. LSCC has been empirically validated regarding its relationship with other external metrics, such as fault occurrences.
+        
+        Thus, LSCC seems to be an outstanding metric for cohesion. Moreover, a mathematically compliant framework for automatic refactoring advice is provided with the metric. Thanks to a generic formula the need to execute \textit{Move Method} or \textit{Extract Class} activities can be evaluated automatically.
+        
+        However, LSCC is not semantically\,---\,i.e. only structurally\,----\,based and cannot capture this aspect of cohesion. The framework can help to refactor but still cannot differ if an attribute should better be deleted rather than moved\,----\. Moreover, the calculus for refactoring takes computation time and has to be executed for every couple of methods, and cannot be applied in some huge classes with many methods.
+        
+    \subsubsection{\citetitle{s29_cohesion} \cite{s29_cohesion}}
+    
+        The authors develop a method for applying the \textit{Extract Class} refactoring to classes with low cohesion, based on structural and semantic cohesion metrics. They construct a class-method graph, weighted with a composite cohesion measure, and then, use the \textit{MaxFlow-MinCut} algorithm to find the two result classes.
+        
+        The authors investigate the effects that the operation parameters have on the resulting metrics and whether the combination of structural and semantic measures of cohesion results in improved outcome relative to using only one type. Their case study involves merging class pairs into blobs, performing the refactoring and evaluating the similarity to the original class pair using the F-measure. They repeat that for three software projects and various values of the parameters to spot the optimal configuration and using statistical tests, they answer positively regarding the relevance of both types of measures.
+
+        Finally, the authors test their method against real blobs analyzed in a previous publication. They note that the refactoring operation yields lower cohesion and, based on postgraduate student opinions, sometimes reasonable results, but it fails in cases where the operation is inappropriate, which is reflected in coupling metrics.
+    
+\subsection{Summaries of articles about maintainability metrics}
+
+    \subsubsection{\citetitle{s116_maintainability} \cite{s116_maintainability}}
+    
+        Maintainability in software systems is defined as probability of performing essential changes to increase the quality and performance of the product. The purpose of this research is to form a software maintainability prediction model using data mining on existing maintainability metrics, and datasets of open-source softwares and data mining classifiers. The authors want to give an accurate maintainability prediction model which calculates the probability of change in different modules of the code, and thus helps lessens maintenance efforts.
+        
+        The classifiers are Naïve Bayes, Bayes Network, Logistic Regression, Multilayer perceptron and Random Forest. It is found that Random forest models are accurate software maintainability prediction model which are determined by data mining of metrics and have high performance measures regarding recall, precision, and ROC area. The new software metrics like Halstead bugs (B), CLOC, Command, Inner, Dcy are useful for prediction of software maintainability. The limitation is that the process of selection of predictor variables which have an impact on maintainability and is specific to particular application domains. Thus, a generic selection of variables cannot be created, because it depends on the context of application.
+    
+    \subsubsection{\citetitle{s219_maintainability} \cite{s219_maintainability}}
+    \label{article_summary_s219}
+    
+        This article focuses on the link between occurrences of code smells in the code and their effects on the maintainability of a project. The purpose is to know if maintenance problems can be predicted by the automatic detection of code smells. The authors conducted a case study on four real softwares, designed in the context of the scientific experiment, for a \textit{unique purpose}, and which are thus \textit{functionally equivalent} although they differ in size and internal architecture. After detecting code smells, the authors conducted a scientific study on the application of the same maintenance task on these four softwares and report maintenance problems encountered during the experiment.    
+        
+        The authors acknowledge the limits of this study: first, the definition of a \textit{maintenance problem} can be subject to interpretation, even if a clear definition is given in this particular article. The analysis were mainly qualitative and manually executed, leading to subjective interpretation, even if solid triangulation approaches have been used to reduce biases.
+        
+        The authors' observation is that code smells relate for (only) 30\% of maintenance problems. Most of the code smells are subject to interaction effects with other code smells, or other parts of the code. Most of them could already be spotted through other indicators such as coupling, size and complexity. Thus, code smells detection alone cannot furnish a global vision on future maintenance problems and has to be combined with other metrics.
+    
+    \subsubsection{\citetitle{s13_maintainability} \cite{s13_maintainability}}
+    
+        In this paper, the authors use a Mamdani fuzzy logic engine with the objective of predicting the number of changes that happen in each step of the project maintenance phase based on several known maintainability metrics. While discussing related work, they make the point that fuzzy methods can be an approach well suited for measuring software, precisely because it is so multi-faceted. As their working data, they use Li and Henry's datasets of metrics from the UMIS and QUES software projects. They make use of Pearson’s Correlation Coefficient to identify which of the variables present in the data bear a relation to the changes to the software. Based on the result, they construct two different fuzzy logic predictors that they train using the datasets. After that, they evaluate the model by comparing the actual and predicted changes and by computing relative error statistics, noting the good performance of the prediction model.
+
+\subsection{Summaries of articles about coupling metrics}
+
+    \subsubsection{\citetitle{s88_coupling} \cite{s88_coupling}}
+    
+        The authors investigated into static and dynamic coupling metrics regarding the correlation in between. Therefore, they selected one static object-oriented metric type called coupling between objects (CBO) and its equivalent for dynamic measurements called Dynamic CBO (DCBO). CBO is counting the coupled classes for a specific class. DCBO does nothing else than to measure the same but during runtime. For this reason, the code must be manipulated so that the dynamic coupling data can be gathered. This mechanism is called dynamic profiling.
+        
+        For the investigation they used different Java open-source applications which they first selected by specific criteria to reduce biases. After applying the metric, they compared the results from CBO to DCBO. Most of the applied metrics on the test applications share a weak to moderate correlation. That leads to the conclusion, that static and dynamic coupling metrics do not capture exactly the same aspects of coupling.
+
+    \subsubsection{\citetitle{s23_coupling} \cite{s23_coupling}}
+    
+        The context of this paper is to select a case study of three types of software, and consider coupling measures between components to find design patterns. The objective is to choose the most significant coupling measure that should be used for a project and which shows the good interactions between the components in the object-oriented software environment. 
+        
+        Main findings are results obtained from the experiment of the object class feature vectors considering two principal components having range of total variance representing the entire dataset and it considers the most significant component of software which has no uniform coupling measure. The types of software utilize metrics like TNUCC, Class coupling, RNUCC, RNUCD, AHF. Limitations are relating the coupling measures to the software applications tasks and determine which can be used for it. The analysis of the object-oriented system has inconsistencies regarding existing measures which cannot be represented in a unified framework.
+    
+    \subsubsection{\citetitle{s89_coupling} \cite{s89_coupling}}
+    
+        The authors define and evaluate empirically a coupling metric using the Relational Topic Model, a variant of the Latent Dirichlet Allocation generative model. The outputs of this procedure are the link indicator probabilities, which measure the coupling between all pairs of classes, and which can be aggregated to quantify the coupling of a single class to the other classes of the software. 
+        
+        To evaluate the metric, the authors perform a case study on various C++/Java open-source software projects of various sizes. They conduct a Principal Component Analysis, suggesting that, compared to previously known coupling metrics, RTC covers a new principal component accounting for a different $\approx$ 8\% of coupling from either structural or conceptual coupling metrics, i.e. which measures a different aspect of coupling than other metrics. Furthermore, in the context of impact analyses, they argue that RTC outperforms structural coupling in both precision and recall statistics, and that the same statistics are improved when RTC is used in combination with conceptual metrics.
+    
+\subsection{Summaries of articles about understandability metrics: \citetitle{s68_understandability} \cite{s68_understandability}}
+
+        Understandability is essential for projects to explore the relationships between packages that group classes and evaluate software quality of object-oriented designs. The authors conduct a case study on two open-source software systems with a suite of five package level metrics and perform correlation, collinearity and multivariate regression analyses. The objective is to measure the properties of packages like size, coupling, and stability by testing null hypotheses using metrics like NC, Ca, Ce, I, D to evaluate the prediction models that determine the effort to understand a package.
+        
+        The results indicate statistically significant positive correlation among all metrics and understandability of package (except a negative correlation with Ce). The results of the collinearity analysis show that, by neglecting I metric in prediction models, the other metrics are not affected. THe limitations lie in the multivariate regression analysis, which considers only package size for prediction models. The data to measure package understandability was not a reliable study as the it contains dataset having 18 packages.

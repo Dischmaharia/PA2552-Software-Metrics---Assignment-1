@@ -1,0 +1,31 @@
+\begin{table*}[t]
+    \centering
+    \begin{tabular}{p{2cm} p{4cm} p{10cm}}
+        \toprule
+            \textbf{Subtype of metric} & \textbf{Name} & \textbf{Description} \\
+        \midrule
+            \multirow{6}{*}{Structural} 
+             & Coupling Between Object classes (CBO)	& Sometimes defined as the number of classes referenced in a class, sometimes as the number of classes either referenced or referencing a class \cite{s89_coupling, s29_cohesion, s116_maintainability}.\\
+            \cmidrule(rl){2-3} & Dynamic CBO (DCBO) & DCBO measures similar aspects of coupling like CBO. For the Dynamic CBO, the metric data will be gathered during run-time and in a second step, the metric numbers are calculated \cite{s88_coupling}. \\
+            \cmidrule(rl){2-3} & Response For Class (RFC) & Number of methods either belonging to the class or called in one of the class methods \cite{s89_coupling, s13_maintainability, s116_maintainability}.  \\
+            \cmidrule(rl){2-3} & Message Passing Coupling (MPC) & Number of method calls from one class to another \cite{s89_coupling, s13_maintainability, s29_cohesion, s116_maintainability}. \\
+            \cmidrule(rl){2-3} & Data Abstraction Coupling (DAC) & Number of instance variables having an abstract data type \cite{s89_coupling, s13_maintainability}.\\
+            \cmidrule(rl){2-3} & Briand et al. measure suite (including ACAIC, OCAIC, ACMIC, OCMIC) & General number of interactions of other classes elements with the class measured. In the mentioned cases, counts of the references to a class' attributes (CA) and methods (CM) differentiated between references from ancestors (A) and other (O) classes in the hierarchy \cite{s89_coupling}. \\
+        \midrule
+            \multirow[p]{2}{*}{Conceptual} 
+            & Conceptual Similarity between Methods (CSBM, CSBM\textsubscript{m}) and Conceptual Coupling of Classes (CoCC, CoCC\textsubscript{m})  & Latent  Semantic  Indexing based coupling metrics. After parsing, indexing and representation of methods as vectors in the semantic space, their angle cosine is calculated. These metrics are aggregated (with average or maximum) over method pairs to obtain metrics on a class pair basis (CSBM and CSBM\textsubscript{m} resp.) and then over classes to obtain a class metric (CoCC and CoCC\textsubscript{m} resp.) \cite{s89_coupling}.\\
+            \cmidrule(rl){2-3} & Relational Topic - based Coupling (RTC\textsubscript{S}, RTC\textsubscript{C}) & Link probabilities between methods in a class, based on the Relational Topic Model. Per class metric can be calculated by averaging over the class' methods \cite{s89_coupling}. \\
+          
+         \midrule
+            \multirow[p]{2}{*}{Without Ratio} & Total number of evidences for “User classes through dependency relation” (TNUCC) & Metric that measures the count of total number of usage evidences of a class by the other classes \cite{s23_coupling}. \\
+             \cmidrule(rl){2-3} & Class Coupling (CLC) & Metric that measures how one class is connected or dependent with another class. The sum estimation of Client and Server Coupling of class considers out and in degree of a node in Class Class Interaction Graph (CCIG)  \cite{s23_coupling}.\\
+            
+        \midrule
+            \multirow[p]{4}{*}{With Ratio} & Ratio of NUCC to TNUCC (RNUCC) & Metric that measures the ratio between TNUCC and NUCC only when count of NUCC is greater than 1  \cite{s23_coupling}. \\
+             \cmidrule(rl){2-3} & Attribute Hiding Factor (AHF) & Metric that defined as ratio of sum of invisibilities of all attributes in classes to total no. of attributes in the system  \cite{s23_coupling}.\\
+        
+        \bottomrule
+    \end{tabular}
+    \caption{Description of the coupling metrics encountered in the studied papers.}
+    \label{table:coupling_metrics}
+\end{table*}
